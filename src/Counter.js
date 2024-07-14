@@ -1,4 +1,5 @@
 import React , {useState} from 'react';
+import ReactDOM from 'react-dom'; //react dom used for virtual dom
 //usestate implemnteed here
 const Counter =()=>{
     const [count, setCount]=useState(0);
@@ -12,9 +13,6 @@ const Counter =()=>{
         setCount(count -1);
         setDecrementcnt(decrementcnt+1);
     };
-
-
-
 return (
     <div>
 
@@ -29,4 +27,6 @@ return (
     </div>
 );
 };
+ReactDOM.render(<Counter/>,document.getElementById('root')); //render used to render the components
+
 export default Counter;
